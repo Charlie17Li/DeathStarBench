@@ -37,7 +37,7 @@ clean:
 
 $(BIN): $(OBJ)
 	@echo LINK $(BIN)
-	@$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+	@$(CC) $(LDFLAGS) -o $@ $^ $(LIBS) 
 
 $(OBJ): config.h Makefile $(LDIR)/libluajit.a | $(ODIR)
 
@@ -50,7 +50,7 @@ $(ODIR)/bytecode.o: src/wrk.lua
 
 $(ODIR)/%.o : %.c
 	@echo CC $<
-	@$(CC) $(CFLAGS) -c -o $@ $<
+	@$(CC) $(CFLAGS) -static -c -o $@ $<
 
 $(LDIR)/libluajit.a:
 	@echo Building LuaJIT...

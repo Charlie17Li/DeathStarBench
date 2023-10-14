@@ -5,7 +5,7 @@ cd $(dirname $0)/..
 
 EXEC="docker buildx"
 
-USER="igorrudyk1"
+USER="charlie1380"
 
 TAG="latest"
 
@@ -24,6 +24,5 @@ do
 
   echo
 done
-
 
 cd - >/dev/null

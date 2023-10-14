@@ -1,5 +1,6 @@
 FROM golang:1.17.3
 
+ENV GOPROXY https://goproxy.cn,direct
 RUN git config --global http.sslverify false
 COPY . /go/src/github.com/harlow/go-micro-services
 WORKDIR /go/src/github.com/harlow/go-micro-services
